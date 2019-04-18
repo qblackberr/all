@@ -1,0 +1,15 @@
+li:nth-child(2n) {
+    color: #83d6e7;
+}
+li:nth-child(5) {
+    color: #d3e086;
+}
+li:nth-child(7) {
+    color: #d3e086;
+}
+ol li:last-child {
+    color: #4d98d4;
+}
+div:nth-child(3n) ul li:first-child {
+    color: red;
+}

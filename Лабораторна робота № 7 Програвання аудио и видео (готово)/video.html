@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video</title>
+</head>
+<body>
+    <video id="videoPlayer" controls width="710" height="538" poster="video/play.jpg"></video>
+</body>
+<script>
+    const videoList = ['video/video.mp4'];
+    var videoCounter = 0;
+
+    video = document.getElementById('videoPlayer');
+    video.src = videoList[videoCounter];
+    video.addEventListener('ended',function() {
+        videoCounter < videoList.length-1 ? videoCounter++ : videoCounter = 0;
+        video.src = videoList[videoCounter];
+        video.pause();
+        video.load();
+        video.play();
+    });
+</script>
+</html>
